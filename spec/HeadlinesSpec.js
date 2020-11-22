@@ -18,8 +18,8 @@ describe("Headlines", () => {
   it('can render the data', () => {
     expectedResult = [
       '<ul>',
-      "<li><a href='https://www.theguardian.com/fashion'>Goodbye Dominic Cummings, carefully styled disruptive dresser</a></li>",
-      "<li><a href='https://www.theguardian.com/politics'>'End of Cummings era' – what the papers say</a></li>",
+      "<li>Goodbye Dominic Cummings, carefully styled disruptive dresser<a href = '#fashion/2020/nov/13/goodbye-dominic-cummings-carefully-styled-disruptive-dresser'><button>View Summary</button></a></li>",
+      "<li>'End of Cummings era' – what the papers say<a href = '#politics/2020/nov/14/end-of-cummings-era-what-the-papers-say'><button>View Summary</button></a></li>",
       '</ul>'
     ].join("")
     headlines.render(mockdata)

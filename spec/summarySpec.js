@@ -3,7 +3,7 @@ describe('summary', () => {
   let mock$
   let mockElement
   let url
-  
+
   beforeEach(() => {
     url = 'http://www.example.com'
     mockElement = {}
@@ -13,6 +13,6 @@ describe('summary', () => {
 
   it('#get renders a summary of the page at a URL', async() => {
     await summary.get()
-    expect(mockElement.innerHTML).toBe('<p>Sentence 1. Sentence 2. Sentence 3.</p>')
+    expect(mockElement.innerHTML).toBe("<p>Sentence 1. Sentence 2. Sentence 3.</p><button onclick='window.history.back()'>Back to Headlines</button>")
   })
 })
