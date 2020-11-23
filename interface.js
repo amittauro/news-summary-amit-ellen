@@ -1,4 +1,14 @@
 window.addEventListener('load', () => {
+  let timer = 500
+  for (let i = 1; i <= 10; i++ ) {
+    setTimeout(() => {
+      document.getElementById(i).style.display = 'block';
+    }, i * timer)
+  }
+
+  setTimeout(() => {
+    document.getElementById('1').style.display = 'block';
+  }, 2000)
   let element = document.getElementById('app')
   let headlines = new Headlines(element, $)
   headlines.get('cummings')

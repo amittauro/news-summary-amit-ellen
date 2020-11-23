@@ -12,8 +12,13 @@ class Headlines {
 
   render(data) {
     let elements = ['<ul>']
-    data.response.results.forEach(result => elements.push(`<li>${result.webTitle}<a href = '#${result.id}'><button>View Summary</button></a></li>`))
+    data.response.results.forEach((result,index) => {
+      elements.push(`<li id='${index + 1}'>${result.webTitle}<a href='#${result.id}'><button>View Summary</button></a><a href='${result.webUrl}'><button>View Full Article</button></a></li>`)
+    })
     elements.push('</ul>')
     this.element.innerHTML = elements.join("")
   }
 }
+
+
+
